@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% comment %} create the landing page for the Finance Project {% endcomment %}
+
+{% block content %}
+{% comment %} Welcome the user {% endcomment %}
+<div class="container-fluid text-center">
+    <h1 class="text-center mt-2">Welcome!</h1>
+    <hr>
+</div>
+
+{% comment %} list out the projects that will be showcased {% endcomment %}
+<div class="container grid_container">
+    <h2 class="text-center fw-bold">My Projects</h2>
+    {% comment %} display the projects in a grid format {% endcomment %}
+    <div class="row justify-content-center">
+        {% comment %} display the bank app {% endcomment %}
+        <div class="col-md-5 col-sm-12 text-center mb-3 grid_item">
+            <h1 class="h1 bi bi-bank"></h1>
+            <h4>Login to Your Bank</h4>
+            <a href="#" class="btn btn-md btn-primary">Login</a>
+        </div>
+
+        {% comment %} display the investing app {% endcomment %}
+        <div class="col-md-5 col-sm-12 text-center mb-3 grid_item">
+            <h1 class="h1 bi bi-coin"></h1>
+            <h4>View Your Investments</h4>
+            <a href="#" class="btn btn-md btn-primary">View</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
