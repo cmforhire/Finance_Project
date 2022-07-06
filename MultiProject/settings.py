@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'landing',
     'banking',
-    'investing',
 ]
+
+# Custom User model being used
+# AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,6 +121,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+# grab environment variables
+ROUTING = env('ROUTING')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% comment %} Allow the user to login to their account {% endcomment %}
+
+{% block content %}
+<div class="container text-center mt-3">
+    <h3>Login to Your Account</h3>
+    <hr>
+    {% comment %} Display the form for logging into the Bank site {% endcomment %}
+     <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <div class="text-center">
+            <button class="btn btn-md btn-primary mt-3" type="submit">Sign in</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
